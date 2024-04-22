@@ -2,10 +2,11 @@ const keys = require('dotenv').config()
 const httpReq = require('postman-request')
 
 const weatherstack_key = process.env.WEATHER_STACK_KEY
+console.log(weatherstack_key)
 
 const forecast = (latitude, longitude, callback)=>{
     const url = `http://api.weatherstack.com/current?access_key=${weatherstack_key}&query=${latitude},${longitude}`
-    // console.log(url)
+    console.log(url)
     httpReq({url, json: true}, (error, {body}) => {
         if(error){
             callback('Unable to connect to weather service!',undefined)
