@@ -26,21 +26,21 @@ app.use(express.static(publicDirectoryPath))
 app.get('',(req,res)=>{
     res.render('index',{
         title: 'Weather',
-        name: 'Andrew'
+        name: 'OzzDm'
     })
 })
 
 app.get('/about',(req,res)=>{
     res.render('about',{
         title: 'About',
-        name: 'Andrew'
+        name: 'OzzDm'
     })
 })
 
 app.get('/help',(req, res)=>{
     res.render('help',{
         title: 'Help Page!',
-        name: 'Andrew'
+        name: 'OzzDm'
     })
 })
 
@@ -84,7 +84,7 @@ app.get('/product',(req,res)=>{
 app.get('/help/*',(req,res)=>{
     res.render('error',{
         title: '404',
-        name: 'Andrew',
+        name: 'OzzDm',
         error: 'Help article not found!'
     })
 })
@@ -92,7 +92,7 @@ app.get('/help/*',(req,res)=>{
 app.get('*',(req,res)=>{   // express provides wild-card character to be placed in place of URLs. Here '*' means everything thats matching
     res.render('error',{
         title: '404',
-        name: 'Andrew',
+        name: 'OzzDm',
         error: '404 Page not found!'
     })
 })
